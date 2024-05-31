@@ -8,3 +8,18 @@
 body {
     font-family: 'roboto', sans-serif;
 }
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+
+    height: 85px;
+    width: 100%;
+    background-color: black;
+}
+
+ul {
+    display: flex;
+    align-items: end;
+}
+

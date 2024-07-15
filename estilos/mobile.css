@@ -150,7 +150,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .projects_list img {
@@ -194,7 +194,6 @@ html {
 /* FIM DA SESSÃO 'PROJETOS' */
 
 /* INÍCIO DA SESSÃO 'RODAPÉ' */
-
 footer {
     width: 100%;
     background-color: #181818;
@@ -213,4 +212,65 @@ footer a {
 
 footer p {
     margin-left: 10px;
+}
+/* FIM DA SESSÃO 'RODAPÉ' */
+
+/* MEDIA QUERY */
+
+
+
+@media (max-width: 1050px) { 
+    /*Significa que, tudo que estiver dentro dessa Media Query, irá sobreescrever oq foi feito nas estilização do resto desse CSS até 105opx, quando passar desse número, a preferência volta a ser a normal.*/
+
+    /* INÍCIO MAIN */
+    .main h1 {
+        font-size: 45px;
+    }
+
+    .main p {
+        font-size: 18px;
+    }
+
+    .main {
+        background-size: cover;
+    }
+    /* FIM MAIN */
+
+    /* INÍCIO SOBRE */
+    .about {
+        flex-direction: column;
+        padding-top: 80px;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+    }
+
+    .description {
+        max-width: 80%;
+    }
+
+    .description h2 {
+        font-size: 40px;
+    }
+
+    .about img {
+        width: 80%;
+        margin-top: 30px;
+    }
+    /* FIM SOBRE */
+
+    /* INÍCIO DE 'PROJETOS' */
+    .projects_list img {
+        width: 28%;
+    }
+    /* FIM DE 'PROJETOS' */
+
+    /* INÍCIO DE 'RODAPÉ' */
+    footer {
+        flex-direction: column;
+    }
+
+    footer p {
+        margin: 0;
+    }
 }

@@ -6,15 +6,20 @@
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* INÍCIO DO HEADER */
 .nav {
-    background-color: black;
+    background-color: #181818;
 
     height: 85px;
     width: 100%;
 
     display: flex;
     justify-content: end;
+    position: fixed;
 }
 
 .nav_list {
@@ -45,7 +50,7 @@
 .main {
     background-color: grey;
     width: 100%;
-    height: calc(100vh - 85px);
+    height: 100vh;
     background-image: url('../imagens/programador.png');
 
     display: flex;
@@ -91,3 +96,121 @@
     transform: scale(0.95); /*Fazer o efeito de quando o botão for clicado, diminuir de tamanho.*/
 }
 /* FIM DO MAIN */
+
+/* INÍCIO DO 'SOBRE MIM' */
+.about {
+    background-color: #FFFFFF;
+    width: 100%;
+
+    padding: 80px 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.description {
+    max-width: 50%;
+    padding-right: 50px;
+}
+
+.about img {
+    max-width: 500px;
+    border-radius: 3%;
+}
+
+.about h2 {
+    font-size: 32px;
+    padding-bottom: 15px;
+}
+/* FIM DO 'SOBRE MIM' */
+
+/* INÍCIO DA SESSÃO 'PROJETOS' */
+.projects {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0px;
+}
+
+.projects h2 {
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+.projects p {
+    padding-bottom: 10px;
+    font-style: italic;
+}
+
+.projects_list {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.projects_list img {
+    width: 25%;
+    margin: 0px 10px;
+
+    opacity: 0.8;
+    transition: opacity 0.15s, transform 0.15s;
+}
+
+.projects_list img:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.projects_list img:active {
+    opacity: 0.7;
+    transform: scale(0.95);
+}
+
+.budget_button {
+    border: none;
+    background-color: #181818;
+    color: #FFFFFF;
+
+    padding: 14px 28px;
+    font-weight: bolder;
+
+    transition: opacity 0.15s, transform 0.15s;
+}
+
+.budget_button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.budget_button:active {
+    opacity: 0.7;
+    transform: scale(0.95);
+}
+/* FIM DA SESSÃO 'PROJETOS' */
+
+/* INÍCIO DA SESSÃO 'RODAPÉ' */
+
+footer {
+    width: 100%;
+    background-color: #181818;
+    color: #FFFFFF;
+    padding: 80px 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+footer p {
+    margin-left: 10px;
+}

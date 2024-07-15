@@ -1,147 +1,93 @@
 * {
+    box-sizing: border-box;
+
+    font-family: 'Roboto', 'Arial', 'Helvetica';
     padding: 0;
     margin: 0;
-    outline: 0;
-    box-sizing: border-box;
 }
 
-body {
-    font-family: 'roboto', sans-serif;
-}
-
-
-/*---------- INÍCIO DO HEADER ---------*/
-nav {
-    display: flex;
-    justify-content: flex-end;
-    position: sticky;
-    top: 0;
-    z-index: 9;
+/* INÍCIO DO HEADER */
+.nav {
+    background-color: black;
 
     height: 85px;
     width: 100%;
-    background-color: rgb(0, 0, 0);
-}
 
-ul {
     display: flex;
-    align-items: center;
+    justify-content: end;
+}
+
+.nav_list {
+    display: flex;
+    align-items: end;
     list-style: none;
-
-    margin-right: 15px;
+    margin: 0px 20px 12px 0px;
 }
 
-ul a {
+.nav_list a {
+    padding: 7px;
     text-decoration: none;
-    color: #ddd;
 
-    padding: 15px;
+    color: #DDDD;
+    transition: opacity 0.15s, color 0.15s;
 }
 
-ul a:hover {
+.nav_list a:hover {
     color: white;
 }
-/*---------- FIM DO HEADER ---------*/
 
+.nav_list a:active {
+    opacity: 0.7;
+}
+/* FIM DO HEADER */
 
-/*---------- INÍCIO DO MAIN ----------*/
-.mainsec {
-    background-color: black;
-    background-image: url('../imagens/programador.png');
-    
-
+/* INÍCIO DO MAIN */
+.main {
+    background-color: grey;
     width: 100%;
     height: calc(100vh - 85px);
+    background-image: url('../imagens/programador.png');
 
     display: flex;
     align-items: center;
-    padding-left: 10%;
+    padding: 15%;
 }
 
 .main h1 {
     color: white;
-    font-size: 50px;
+    font-size: 55px;
 }
 
 .main p {
-    color: #1E90FF;
-    font-size: 25px;
+    font-size: 20px;
     font-style: italic;
+    color: royalblue;
 
-    margin-top: 15px;
-    margin-bottom: 35px;
+    margin: 25px 0px 35px 0px;
 }
 
-.button_main {
-    border-radius: 5px;
-    border: none;
-    padding: 7px;
+.main a {
+    text-decoration: none;
+}
 
+.first_button {
     cursor: pointer;
-    font-size: 19px;
+
+    padding: 15px;
+    border: none;
+
+    font-size: 17px;
     font-weight: bolder;
+
+    transition: opacity 0.15s, transform 0.15s;
 }
 
-.button_main:hover {
-    transform: scale(1.1);
-    transition: 1.5s;
-}
-/*---------- FIM DO MAIN ----------*/
-
-/*---------- INÍCIO DO SOBRE MIM ----------*/
-.about {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    background-color: white;
-    padding: 80px 10% 80px 10%;
+.first_button:hover {
+    opacity: .8;
 }
 
-.about div {
-    max-width: 50%;
-    margin-right: 45px;
+.first_button:active {
+    opacity: .5;
+    transform: scale(0.95); /*Fazer o efeito de quando o botão for clicado, diminuir de tamanho.*/
 }
-
-.about img {
-    max-width: 400px;
-}
-
-.about h2 {
-    margin-bottom: 10px;
-}
-/*---------- FIM DO SOBRE  MIM ----------*/
-
-/*---------- INÍCIO DO 'PROJETOS' ----------*/
-.area_projetos {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    padding: 80px 0;
-}
-
-.area_projetos h2 {
-    font-size: 35px;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-.area_projetos p {
-    font-style: italic;
-    margin-bottom: 20px;
-}
-
-.projetos_lista {
-    width: 100%;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.projetos_lista img {
-    margin: 1px;
-}
+/* FIM DO MAIN */
